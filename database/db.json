@@ -1,0 +1,14 @@
+{
+    "news": [
+      {
+        "id": 1,
+        "title": "Hit the gym",
+        "done": false
+      },
+      {
+        "title": "Pay bills",
+        "done": true,
+        "id": 2
+      }
+    ]
+  }
