@@ -31,13 +31,13 @@ const News2=()=>{
             rows.push(
                 <Row key={index} className="justify-content-center mt-5">
                     <Col className="col-md-4">
-                        <Skeleton height={140} />
+                        <Skeleton duration={5} height={140} />
                     </Col>
                     <Col className="col-md-6">
                         <div className='content-detail'>
-                            <h5 className='title'><Skeleton /></h5>
-                            <p className='desc'><Skeleton /></p>
-                            <p className='content'><Skeleton /></p>
+                            <h5 duration={5} className='title'><Skeleton /></h5>
+                            <p duration={6} className='desc'><Skeleton /></p>
+                            <p duration={7} className='content'><Skeleton /></p>
                         </div>
                     </Col>   
                 </Row>
