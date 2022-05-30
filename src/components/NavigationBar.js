@@ -25,8 +25,8 @@ const NavigationBar=(props)=>{
                         <li className={splitLocation[1] === "" ? "active" : ""}>
                             <Link className='nav-link' to='/'>Home</Link>
                         </li>
-                        <li className={splitLocation[1] === "news" ? "active" : ""}>
-                            <Link className='nav-link' to='/news'>News</Link>
+                        <li className={splitLocation[1] === "news2" ? "active" : ""}>
+                            <Link className='nav-link' to='/news2'>News</Link>
                         </li>
                         
                     </Nav>

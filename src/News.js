@@ -4,6 +4,9 @@ import { Row, Col, Container } from 'react-bootstrap';
 import axios from 'axios';
 import { Route, Link } from 'react-router-dom';
 import React from "react";
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
+
 
 class News extends React.Component{
     state = {
@@ -24,6 +27,7 @@ class News extends React.Component{
                 description: `${user.description}`,
                 content: `${user.content}`,
                 image: `${user.urlToImage}`,
+                publishedAt: `${user.publishedAt}`,
               })
               //   {
               //     console.log(response.data.articles);
@@ -60,7 +64,7 @@ class News extends React.Component{
                         title,
                         description,
                         image,
-                        content
+                        publishedAt,
                         } = data;
         
                         return (
@@ -73,7 +77,7 @@ class News extends React.Component{
                                     <div className='content-detail'>
                                         <h5 className='title'>{title}</h5>
                                         <p className='desc'>{description}</p>
-                                        <p className='content'>{content}</p>
+                                        <p className='date'>{publishedAt}</p>
                                     </div>
                                 </Col>
                                 
@@ -82,7 +86,19 @@ class News extends React.Component{
                         );
                     })
                     ) : (
-                    <p>Loading...</p>
+                    // <p>Loading...</p>
+                      <Row className="justify-content-center">
+                          <Col className="col-md-4">
+                              <Skeleton height={140} />
+                          </Col>
+                          <Col className="col-md-6">
+                              <div className='content-detail'>
+                                  <h5 className='title'><Skeleton /></h5>
+                                  <p className='desc'><Skeleton /></p>
+                                  <p className='content'><Skeleton /></p>
+                              </div>
+                          </Col>   
+                      </Row>
                     )}
                 </div>
             </div>
